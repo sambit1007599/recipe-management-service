@@ -1,0 +1,14 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: '@project.artifactId@'
+
+open.api:
+  title: 'RECIPE MANAGEMENT SERVICE'
+  description: 'This service enable you to manage different recipes'
+  version: 1
+  contact:
+    email: sambit1007599@gmail.com
+    teamName: Sambit Samal
