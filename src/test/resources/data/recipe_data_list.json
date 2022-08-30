@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "name": "Aloo-Mutter",
+    "servings": 4,
+    "type": "VEGETARIAN",
+    "ingredients": [
+      "potato",
+      "peas"
+    ],
+    "instructions": "gobi mutter recipe instructions in kadai"
+  },
+  {
+    "id": "2",
+    "name": "Gobi-Mutter",
+    "servings": 2,
+    "type": "VEGETARIAN",
+    "ingredients": [
+      "curly-flowers",
+      "peas"
+    ],
+    "instructions": "gobi mutter recipe instructions in kadai"
+  },
+  {
+    "id": "3",
+    "name": "Chicken-Tikka",
+    "servings": 2,
+    "type": "NON_VEGETARIAN",
+    "ingredients": [
+      "chicken",
+      "curd"
+    ],
+    "instructions": "recipe to prepare chicken tikka in kadai"
+  },
+  {
+    "id": "4",
+    "name": "Chicken-Tandoori",
+    "servings": 2,
+    "type": "NON_VEGETARIAN",
+    "ingredients": [
+      "chicken",
+      "curd"
+    ],
+    "instructions": "recipe to prepare chicken tandoori in oven"
+  }
+]

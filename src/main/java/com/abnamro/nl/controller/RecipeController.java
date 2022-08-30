@@ -34,7 +34,7 @@ public class RecipeController {
         return new ResponseEntity<>(recipeService.getRecipe(id), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/recipe/search", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/search/recipe", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Recipe>> searchRecipes(
             @RequestParam(value = "type", required = false) RecipeType type,
             @RequestParam(value = "servings", required = false) Integer servings,

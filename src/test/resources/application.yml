@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: '@project.artifactId@'
+  data:
+    mongodb:
+      port: 27017
+      auto-index-creation: true
+  mongodb:
+    embedded:
+      version: 4.0.21
+
+open.api:
+  title: 'RECIPE MANAGEMENT SERVICE'
+  description: 'This service enable you to manage different recipes'
+  version: 1
+  contact:
+    email: sambit1007599@gmail.com
+    teamName: Sambit Samal
+
+constants:
+  error:
+    noRecipeFoundException:
+      code: INVALID_RECIPE_ID
+      message: 'No recipe found with the provided Id'
