@@ -48,11 +48,11 @@ class RecipeControllerIT {
     @LocalServerPort
     private int port = 0;
 
-    private static final String GET_URI = "/v1/recipe/{id}";
+    private static final String GET_URI = "/v1/recipes/{id}";
     private static final String POST_URI = "/v1/recipes";
     private static final String PUT_URI = "/v1/recipe";
-    private static final String DELETE_URI = "/v1/recipe/{id}";
-    private static final String SEARCH_URI = "/v1/search/recipe";
+    private static final String DELETE_URI = "/v1/recipes/{id}";
+    private static final String SEARCH_URI = "/v1/recipes";
 
 
     @BeforeAll
@@ -134,7 +134,7 @@ class RecipeControllerIT {
                         .accept(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(status().isNoContent());
         Optional<Recipe> recipe = recipeRepository.findById("3");
-        assertThat(recipe.isEmpty()).isTrue();
+        assertTrue(recipe.isEmpty());
     }
 
     @Test
@@ -167,7 +167,7 @@ class RecipeControllerIT {
         assertThat(recipeList.size()).isEqualTo(1);
         recipeList.forEach(r -> {
             assertThat(r.getServings()).isEqualTo(4);
-            assertThat(r.getIngredients().contains("potato")).isTrue();
+            assertTrue(r.getIngredients().contains("potato"));
         });
     }
 
@@ -186,7 +186,7 @@ class RecipeControllerIT {
         assertThat(recipeList.size()).isEqualTo(1);
         recipeList.forEach(r -> {
             assertThat(r.getIngredients().contains("salmon")).isFalse();
-            assertThat(r.getInstructions().contains("oven")).isTrue();
+            assertTrue(r.getInstructions().contains("oven"));
         });
     }
 }

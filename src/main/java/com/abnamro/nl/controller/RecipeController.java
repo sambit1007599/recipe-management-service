@@ -29,12 +29,12 @@ public class RecipeController {
 
     private final RecipeService recipeService;
 
-    @GetMapping(value = "/recipe/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/recipes/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Recipe> getRecipeById(@PathVariable("id") String id) {
         return new ResponseEntity<>(recipeService.getRecipe(id), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/search/recipe", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/recipes", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Recipe>> searchRecipes(
             @RequestParam(value = "type", required = false) RecipeType type,
             @RequestParam(value = "servings", required = false) Integer servings,
@@ -60,7 +60,7 @@ public class RecipeController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @DeleteMapping("/recipe/{id}")
+    @DeleteMapping("/recipes/{id}")
     public ResponseEntity deleteRecipe(@PathVariable("id") String id) {
         recipeService.deleteRecipe(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
