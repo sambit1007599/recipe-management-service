@@ -21,6 +21,7 @@ This service will allow you to manage different recipes.
 - SpringBoot
 - Embedded MongoDB
 - Spring AOP
+- JUnit 5
 
 ## Pre-requisite
 
